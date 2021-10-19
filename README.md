@@ -32,7 +32,22 @@ The goal of this project is to build a model that can predict whether restaurant
 
 Datasources:
 - [Austin Restaurant Inspection Scores](https://data.austintexas.gov/Health-and-Community-Services/Food-Establishment-Inspection-Scores/ecmv-9xxi) from the Austin Public Health Department
-- [Go to the Support Web Site](https://support.west-wind.com)
+- [Restaurant Reviews](https://www.kaggle.com/yelp-dataset/yelp-dataset) from Yelp
+
+High-Level Info:
+- The dataset 3 years-worth of inspections history amounting to 5,825 total inspections.  In leveraging Yelp reviews I've allowed a 60-days lookback window in order to stay within the roughly quarterly inspections schedule and prevent data leakage.  I've also made the assumption that categorical/dummy variables (ie. `has_outdoor_seating`, `takes_reservations`) are static over the three year period.
+
+# EDA
+
+One interesting finding from the Exploratory Data Analysis is that both inspection scores and yelp reviews are left-skewed and tend to be relatively.  Additionally, and encouragingly this tendency is robust to high/low ratings and price point.  As a consumer, we would clearly like to see more high scores than low scores across a variety of restaurants.
+
+<img width="216" alt="image" src="https://user-images.githubusercontent.com/9493836/137853099-4a2aa549-a62e-480a-9c17-286b5809e513.png">
+<img width="249" alt="image" src="https://user-images.githubusercontent.com/9493836/137853125-b84c133f-9679-49e8-81cc-c6f69d42081c.png">
+<img width="298" alt="image" src="https://user-images.githubusercontent.com/9493836/137853137-f8cfc1f3-9e3b-4fab-9a22-b88f6321d7db.png">
+![Uploading image.png…]()
+
+
+
 
 <!-- toc -->
 
