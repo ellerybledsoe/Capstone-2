@@ -31,7 +31,7 @@ The goal of this project is to build a model that can predict whether restaurant
 # The Data
 
 Datasources:
-- [Austin Restaurant Inspection Scores] (https://data.austintexas.gov/Health-and-Community-Services/Food-Establishment-Inspection-Scores/ecmv-9xxi) from the Austin Public Health Department
+- [Austin Restaurant Inspection Scores] (#https://data.austintexas.gov/Health-and-Community-Services/Food-Establishment-Inspection-Scores/ecmv-9xxi) from the Austin Public Health Department
 
 <!-- toc -->
 
