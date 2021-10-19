@@ -48,7 +48,7 @@ There are a couple different approaches I tried here which are explained in more
 
 ### Autoencoder
 
-In building the autoencoder, the high level idea is that you can train the model on our majority class, in this case `passed` inspections, in order for it to become good to predicting that class and subsequently predict our minority class, `failed` inspections.  By building in the model in this fashion the goal would be to find a clear difference in the distributiona of receonstruction error between our majority class and our anomalies which is what we're interested in.  I tried a few different hyperparameter settings and ultimately with the following:
+In building the autoencoder, the high level idea is that you can train the model on our majority class, in this case `passed` inspections, in order for it to become good to predicting that class and subsequently predict our minority class, `failed` inspections.  By building in the model in this fashion the goal would be to find a clear difference in the distribution of reconstruction error between our majority class and our anomalies which is what we're interested in.  I tried a few different hyperparameter settings and ultimately with the following:
 
 - 2 hidden layer decoder using a relu activation function
 - 2 hidden layer encoder using a relu activation function and an output layer using a sigmoid activation
@@ -60,10 +60,18 @@ Below you can the distributions of the reconstruction error and naturally the lo
 
 ![image](https://user-images.githubusercontent.com/9493836/137924526-9af25de4-09f0-445d-b7cf-462a8daa901e.png)
 
-It appears *maaaaybe* the small set of data points has a central tendency to the right of that of our `passes` but it's not clear; additionally, only a couple of observations fall outside the chosen 2 standard deviation threshhold.  From this analysis, I can't conclude that there is any meaningful separation between the two classes.
+It appears *maaaaybe* the small set of data points has a central tendency to the right of that of our `passes` but it's not clear; additionally, only a couple of observations fall outside the chosen 2 standard deviation threshold.  From this analysis, I can't conclude that there is any meaningful separation between the two classes.
 
 
 ### Isolation Forest
+
+An isolation forest as a second approach seemed like a good option since the model doesn't rely on distant-based calculations, and as result you can train it without scaling the data.  The fnal version of this model has max_samples set to 100 and the number of estimators set to 20.  This model achieved 87.5% recall in predicting failed inspections but had a very low precision of 0.9% and thus is not general-izable unless their is little or no cost for false positives.  In this case, as a restaurant manager that amounts to believing that you're likely fail an inspection.  Perhaps here the cost of failing is so high (ie. temporary restaurant closure, defection of patrons) that it's worth the extra precaution and investment to stave off even a low chance of failure.
+
+<img width="423" alt="image" src="https://user-images.githubusercontent.com/9493836/137949437-2d273a30-3d55-47c4-a7e4-b76b1afcff9d.png">
+
+
+### Take-aways
+
 
 
 <!-- toc -->
