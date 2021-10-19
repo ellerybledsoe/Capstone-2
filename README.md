@@ -37,7 +37,9 @@ As mentioned previously, the data is highly imbalanced which was a big part of t
 
 ![image](https://user-images.githubusercontent.com/9493836/137855109-95cdb03f-ba4e-4819-831f-7c09c983f0a6.png)
 
+# Sentiment Analysis
 
+...
 
 
 <!-- toc -->
