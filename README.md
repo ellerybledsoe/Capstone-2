@@ -30,7 +30,7 @@ The goal of this project is to build a model that can predict whether restaurant
 
 One interesting finding from the Exploratory Data Analysis is that both inspection scores and yelp reviews are left-skewed and tend to be relatively.  Additionally, and encouragingly this tendency is robust to high/low ratings and price point.  As a consumer, we would clearly like to see more high scores than low scores across a variety of restaurants.  On the flip side, this hints at a challenging problem ahead since we see no substantial shift in the distribution across these first couple dimensions which one might hypothesize would impact inspection scores.
 
-<img width="217" alt="image" src="https://user-images.githubusercontent.com/9493836/137853246-fc9a148d-e9d2-461d-ac3a-e68937a49c15.png">.  <img width="216" alt="image" src="https://user-images.githubusercontent.com/9493836/137926246-807a36cb-6285-46e8-87d4-315221deb599.png">
+<img width="217" alt="image" src="https://user-images.githubusercontent.com/9493836/137853246-fc9a148d-e9d2-461d-ac3a-e68937a49c15.png">. <img width="216" alt="image" src="https://user-images.githubusercontent.com/9493836/137926410-8b1a51d8-0f52-4a3f-97d4-bf3d2944db54.png">
   <img width="249" alt="image" src="https://user-images.githubusercontent.com/9493836/137854166-9610755a-272b-4471-b043-aeb86c8e9a98.png">
   <img width="298" alt="image" src="https://user-images.githubusercontent.com/9493836/137853137-f8cfc1f3-9e3b-4fab-9a22-b88f6321d7db.png">
 
