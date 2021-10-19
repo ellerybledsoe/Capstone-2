@@ -39,7 +39,24 @@ As mentioned previously, the data is highly imbalanced with only 0.9% inspection
 
 # Sentiment Analysis
 
-...
+I explored sentiment analysis as a way to draw out more details on the qualitative nature of the Yelp reviews.  Because the EDA in this area pre-supposes some grouping of positive and negative reviews in order to create, for instance, new features based on ngrams the process becomes a bit self-fulfilling and perhaps introduces multicollinearity.  As an alternative, I wound up pulling `review_length` and `review word count` into the model building. 
+
+# Building the Model
+
+There are a couple different approaches I tried here which are explained in more detail below.
+
+### Autoencoder
+
+In building the autoencoder, the high level idea is that you can train the model on our majority class, in this case `passed` inspections, in order for it to become good to predicting that class and subsequently predict our minority class, `failed` inspections.  By building in the model in this fashion the goal would be to find a clear difference in the distributiona of receonstruction error between our majority class and our anomalies which is what we're interested in.  I tried a few different hyperparameter settings and ultimately with the following:
+
+- 2 hidden layer decoder using a relu activation function
+- 2 hidden layer encoder using a relu activation function and an output layer using a sigmoid activation
+- trained for 40 epochs with an early stop on a mean squared error loss functions
+- batch size = 20
+- the model for 32 each before stopping out
+
+
+### Isolation Forest
 
 
 <!-- toc -->
