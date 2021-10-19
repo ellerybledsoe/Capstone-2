@@ -24,7 +24,7 @@ The goal of this project is to build a model that can predict whether restaurant
 - [Restaurant Reviews](https://www.kaggle.com/yelp-dataset/yelp-dataset) from Yelp
 
 ### High-Level Info:
-- The dataset 3 years-worth of inspections history amounting to 5,825 total inspections.  In leveraging Yelp reviews I've allowed a 60-days lookback window in order to stay within the roughly quarterly inspections schedule and prevent data leakage.  I've also made the assumption that categorical/dummy variables (ie. `has_outdoor_seating`, `takes_reservations`) are static over the three year period.
+- The dataset captures 3 years-worth of inspections history amounting to 5,825 total inspections.  In leveraging Yelp reviews I've allowed a 60-days lookback window in order to stay within the roughly quarterly inspections schedule and prevent data leakage.  I've also made the assumption that categorical/dummy variables (ie. `has_outdoor_seating`, `takes_reservations`) are static over the three year period.
 
 # EDA
 
