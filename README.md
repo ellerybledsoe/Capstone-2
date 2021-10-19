@@ -60,7 +60,7 @@ Below you can the distributions of the reconstruction error and naturally the lo
 
 ![image](https://user-images.githubusercontent.com/9493836/137924526-9af25de4-09f0-445d-b7cf-462a8daa901e.png)
 
-It appears *maaaaybe* the small set of data points has a central tendency to the right of that of our `passes` but it's not clear; additionally only a couple of observations fall outside the chosen 2 standard deviation threshhold.  From this analysis, I can't conclude that there is any meaningful separation between two classes.
+It appears *maaaaybe* the small set of data points has a central tendency to the right of that of our `passes` but it's not clear; additionally, only a couple of observations fall outside the chosen 2 standard deviation threshhold.  From this analysis, I can't conclude that there is any meaningful separation between the two classes.
 
 
 ### Isolation Forest
