@@ -13,11 +13,11 @@
     + [Sub-sub-heading](#sub-sub-heading-2)
 
 
-# The Goal [#the-goal]
+# The Goal
 
 The goal of this project is to build a model that can predict whether restaurants in Austin, TX, are likely to pass or fail their quality inspections.  From this analysis, we can hopefully start to understand what drives favorables scores as these relationships would be of interest to restaurants and consumers alike.  In the case of restaurants, a timely prediction could allow for restaurants to course correct if they're deemed to be likely to receive a low score.
 
-# Motivation and Challenges
+# Motivation & Challenges
 
 ### Motivation
 - Great opportunity to do some anomaly detection
@@ -27,6 +27,11 @@ The goal of this project is to build a model that can predict whether restaurant
 - The data is highly class imbalanced :) 
 - Many restaurants have few or no reviews
 - Relatively small number of inspections.
+
+# The Data
+
+Datasources:
+- [Austin Restaurant Inspection Scores] (https://data.austintexas.gov/Health-and-Community-Services/Food-Establishment-Inspection-Scores/ecmv-9xxi) from the Austin Public Health Department
 
 <!-- toc -->
 
