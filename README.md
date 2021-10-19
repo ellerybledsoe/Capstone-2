@@ -10,7 +10,7 @@ The goal of this project is to build a model that can predict whether restaurant
 
 ### Motivation
 - Great opportunity to do some anomaly detection
-- The data is highly class imbalanced
+- The data is highly class imbalanced (a common 
 
 ### Challenges
 - The data is highly class imbalanced :) 
@@ -28,7 +28,7 @@ The goal of this project is to build a model that can predict whether restaurant
 
 # EDA
 
-One interesting finding from the Exploratory Data Analysis is that both inspection scores and yelp reviews are left-skewed and tend to be relatively.  Additionally, and encouragingly this tendency is robust to high/low ratings and price point.  As a consumer, we would clearly like to see more high scores than low scores across a variety of restaurants.  On the flip side, this hints at a challenging problem ahead since we see no substantial shift in the distribution across these first couple dimensions which one might hypothesize would impact inspection scores.
+One interesting finding from the Exploratory Data Analysis is that both inspection scores and yelp reviews are left-skewed and tend to be relatively high.  Additionally, and encouragingly this tendency is robust to high/low ratings and price point.  As a consumer, we would clearly like to see more high scores than low scores across a variety of restaurants.  On the flip side, this hints at a challenging problem ahead since we see no substantial shift in the distribution across these first couple dimensions which one might hypothesize would impact inspection scores.
 
 <img width="217" alt="image" src="https://user-images.githubusercontent.com/9493836/137853246-fc9a148d-e9d2-461d-ac3a-e68937a49c15.png">. <img width="216" alt="image" src="https://user-images.githubusercontent.com/9493836/137926410-8b1a51d8-0f52-4a3f-97d4-bf3d2944db54.png">
   <img width="249" alt="image" src="https://user-images.githubusercontent.com/9493836/137854166-9610755a-272b-4471-b043-aeb86c8e9a98.png">
@@ -37,6 +37,7 @@ One interesting finding from the Exploratory Data Analysis is that both inspecti
 As mentioned previously, the data is highly imbalanced with only 0.9% of inspections resulting in a failure (this challenge was a big part of the motivation in choosing this problem).  As show below that trend looks relatively stationary over time.  That said, at the restaurant level we do see variation over time.  Given the somewhat geographic nature of the problem, I also looked at how the inspections were distributed across the zip codes in Austin, but didn't see much evidence of geographic relationship with inspection outcomes.
 
 ![image](https://user-images.githubusercontent.com/9493836/137855109-95cdb03f-ba4e-4819-831f-7c09c983f0a6.png)
+
 
 # Sentiment Analysis
 
@@ -72,14 +73,4 @@ An isolation forest as a second approach seemed like a good option since the mod
 
 ### Take-aways
 
-
-
-<!-- toc -->
-
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
+Predicting restaurant inspections has proven to be a challenging problem.  As next steps, I would try to gather more data if possible (perhaps state-wide) and invest some time buidling new features.  While the isolation forest way overshoots the mark in terms of false positives, I generally rate the cost of false positive much lower that true positive which puts a restaurant's business as a whole at risk.  Thus if the false reigned in while still maintaining good recall this would be a good outcome.  Given the wide range of contexts in which class imbalance arises as part of challenge to be solved, I think this was very useful and intriguing area for further exploration.
