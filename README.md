@@ -33,7 +33,7 @@ One interesting finding from the Exploratory Data Analysis is that both inspecti
 <img width="217" alt="image" src="https://user-images.githubusercontent.com/9493836/137853246-fc9a148d-e9d2-461d-ac3a-e68937a49c15.png">. <img width="249" alt="image" src="https://user-images.githubusercontent.com/9493836/137854166-9610755a-272b-4471-b043-aeb86c8e9a98.png">
   <img width="298" alt="image" src="https://user-images.githubusercontent.com/9493836/137853137-f8cfc1f3-9e3b-4fab-9a22-b88f6321d7db.png">
 
-As mentioned previously, the data is highly imbalanced which was a big part of the motivation in choosing this problem.  As show below that trend looks relatively stationary over time.  That said, at the restaurant level we do see variation over time.  Given the somewhat geographic nature of the problem, I also looked at how the inspections were distributed across the zip codes in Austin, but didn't see much evidence of geographic relationship with inspection outcomes.
+As mentioned previously, the data is highly imbalanced with only 0.9% inspections resulting in a failure (this challenge was a big part of the motivation in choosing this problem).  As show below that trend looks relatively stationary over time.  That said, at the restaurant level we do see variation over time.  Given the somewhat geographic nature of the problem, I also looked at how the inspections were distributed across the zip codes in Austin, but didn't see much evidence of geographic relationship with inspection outcomes.
 
 ![image](https://user-images.githubusercontent.com/9493836/137855109-95cdb03f-ba4e-4819-831f-7c09c983f0a6.png)
 
