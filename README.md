@@ -13,9 +13,9 @@
     + [Sub-sub-heading](#sub-sub-heading-2)
 
 
-# The Goal levels
+# The Goal (#the-goal)
 
-> This is a fixture to test heading levels
+The goal of this project is to build a model that can predict whether restaurants in Austin, TX, are likely to pass or fail their quality inspections.  From this analysis, we can hopefully start to understand what drives favorables scores as these relationships would be of interest to restaurants and consumers alike.  In the case of restaurants, a timely prediction could allow for restaurants to course correct if they're deemed to be likely to receive a low score.
 
 <!-- toc -->
 
