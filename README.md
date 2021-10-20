@@ -9,8 +9,8 @@ The goal of this project is to build a model that can predict whether restaurant
 # Motivation & Challenges
 
 ### Motivation
-- Great opportunity to do some anomaly detection
-- The data is highly class imbalanced (a common machine learning problem)
+- Great opportunity to do some anomaly detection (a common machine learning problem)
+- The data is highly class imbalanced
 
 ### Challenges
 - The data is highly class imbalanced :) 
