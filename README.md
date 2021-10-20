@@ -41,7 +41,7 @@ As mentioned previously, the data is highly imbalanced with only 0.9% of inspect
 
 # Sentiment Analysis
 
-I explored sentiment analysis as a way to draw out more details on the qualitative nature of the Yelp reviews.  Because the EDA in this area pre-supposes some grouping of positive and negative reviews in order to create, for instance, new features based on ngrams the process becomes a bit self-fulfilling and perhaps introduces multicollinearity.  As an alternative, I wound up pulling `review_length` and `review word count` into the model building. 
+I explored sentiment analysis as a way to draw out more details on the qualitative nature of the Yelp reviews.  Because the EDA in this area pre-supposes some grouping of positive and negative reviews in order to create, for instance, new features based on ngrams the process becomes a bit self-fulfilling and perhaps introduces multicollinearity.  As an alternative, I wound up pulling `review_length` and `review_word_count` into the model building. 
 
 # Building the Model
 
