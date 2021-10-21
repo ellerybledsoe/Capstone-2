@@ -66,11 +66,11 @@ It appears *maaaaybe* the small set of data points has a central tendency to the
 
 ### Isolation Forest
 
-An isolation forest as a second approach seemed like a good option since the model doesn't rely on distant-based calculations, and as result you can train it without scaling the data.  The fnal version of this model has max_samples set to 100 and the number of estimators set to 20.  This model achieved 87.5% recall in predicting failed inspections but had a very low precision of 0.9% and thus is not general-izable unless their is little or no cost for false positives.  In this case, as a restaurant manager that amounts to believing that you're likely fail an inspection.  Perhaps here the cost of failing is so high (ie. temporary restaurant closure, defection of patrons) that it's worth the extra precaution and investment to stave off even a low chance of failure.
+An isolation forest as a second approach seemed like a good option since the model doesn't rely on distant-based calculations, and as result you can train it without scaling the data.  The fnal version of this model has max_samples set to 100 and the number of estimators set to 20.  This model achieved 87.5% ...
 
-<img width="423" alt="image" src="https://user-images.githubusercontent.com/9493836/137949437-2d273a30-3d55-47c4-a7e4-b76b1afcff9d.png">
+![image](https://user-images.githubusercontent.com/9493836/138332514-7d4e6f75-025c-4456-92a0-0ae4cc2c5fdb.png)
 
 
 ### Take-aways
 
-Predicting restaurant inspections has proven to be a challenging problem.  As next steps, I would try to gather more data if possible (perhaps state-wide) and invest some time buidling new features.  While the isolation forest way overshoots the mark in terms of false positives, in this scenario I would rate the cost of a false positive much lower than that of a true positive which puts a restaurant's business as a whole at risk.  Thus if the false positives can be reigned in while still maintaining good recall this would be a good outcome.  Given the wide range of contexts in which class imbalance arises, I think this is an intriguing area for further exploration.
+Predicting restaurant inspections has proven to be a challenging problem.  As next steps, I would try to gather more data if possible (perhaps state-wide) and invest some time buidling new features.  While the isolation forest ... Given the wide range of contexts in which class imbalance arises, I think this is an intriguing area for further exploration.
