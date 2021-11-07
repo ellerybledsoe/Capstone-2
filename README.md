@@ -66,7 +66,7 @@ It appears *maaaaybe* the small set of data points has a central tendency to the
 
 ### Isolation Forest
 
-An isolation forest as a second approach seemed like a good option since the model doesn't rely on distant-based calculations, and as result you can train it without scaling the data.  The fnal version of this model has max_samples set to 100 and the number of estimators set to 20.  This model achieved 87.5% ...
+An isolation forest as a second approach seemed like a good option since the model doesn't rely on distant-based calculations, and as result you can train it without scaling the data.  The fnal version of this model has max_samples set to 100 and the number of estimators set to 20.  This model correctly predicted 87.5% of failed inspections.
 
 <img width="423" alt="image" src="https://user-images.githubusercontent.com/9493836/138332835-fe5be551-804a-4d60-9368-4bd1133d5f9e.png">
 
