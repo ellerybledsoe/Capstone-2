@@ -73,4 +73,4 @@ An isolation forest as a second approach seemed like a good option since the mod
 
 ### Take-aways
 
-Predicting restaurant inspections has proven to be a challenging problem.  As next steps, I would try to gather more data if possible (perhaps state-wide) and invest some time buidling new features.  While the isolation forest ... Given the wide range of contexts in which class imbalance arises, I think this is an intriguing area for further exploration.
+Predicting restaurant inspections has proven to be a challenging problem.  As next steps, I would try to gather more data if possible (perhaps state-wide) and invest some time buidling new features.  The isolation forest seems to show some early signs of promise so I would continue with trying to make this approach more robust. Given the wide range of contexts in which class imbalance arises, I think this is an intriguing area for further exploration.
