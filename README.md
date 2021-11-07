@@ -9,8 +9,8 @@ The goal of this project is to build a model that can predict whether restaurant
 # Motivation & Challenges
 
 ### Motivation
-- Great opportunity to do some anomaly detection
-- The data is highly class imbalanced (a common 
+- Great opportunity to do some anomaly detection (a common machine learning problem)
+- The data is highly class imbalanced
 
 ### Challenges
 - The data is highly class imbalanced :) 
@@ -24,7 +24,7 @@ The goal of this project is to build a model that can predict whether restaurant
 - [Restaurant Reviews](https://www.kaggle.com/yelp-dataset/yelp-dataset) from Yelp
 
 ### High-Level Info:
-- The dataset captures 3 years-worth of inspections history amounting to 5,825 total inspections.  In leveraging Yelp reviews I've allowed a 60-days lookback window in order to stay within the roughly quarterly inspections schedule and prevent data leakage.  I've also made the assumption that categorical/dummy variables (ie. `has_outdoor_seating`, `takes_reservations`) are static over the three year period.
+- The dataset captures 3 years-worth of inspections history amounting to 5,825 total inspections.  In leveraging Yelp reviews I've allowed a 60-day lookback window in order to stay within the roughly quarterly inspections schedule and prevent data leakage.  I've also made the assumption that categorical/dummy variables (ie. `has_outdoor_seating`, `takes_reservations`) are static over the three year period.
 
 # EDA
 
@@ -41,7 +41,7 @@ As mentioned previously, the data is highly imbalanced with only 0.9% of inspect
 
 # Sentiment Analysis
 
-I explored sentiment analysis as a way to draw out more details on the qualitative nature of the Yelp reviews.  Because the EDA in this area pre-supposes some grouping of positive and negative reviews in order to create, for instance, new features based on ngrams the process becomes a bit self-fulfilling and perhaps introduces multicollinearity.  As an alternative, I wound up pulling `review_length` and `review word count` into the model building. 
+I explored sentiment analysis as a way to draw out more details on the qualitative nature of the Yelp reviews.  Because the EDA in this area pre-supposes some grouping of positive and negative reviews in order to create, for instance, new features based on ngrams the process becomes a bit self-fulfilling and perhaps introduces multicollinearity.  As an alternative, I wound up pulling `review_length` and `review_word_count` into the model building. 
 
 # Building the Model
 
@@ -66,11 +66,11 @@ It appears *maaaaybe* the small set of data points has a central tendency to the
 
 ### Isolation Forest
 
-An isolation forest as a second approach seemed like a good option since the model doesn't rely on distant-based calculations, and as result you can train it without scaling the data.  The fnal version of this model has max_samples set to 100 and the number of estimators set to 20.  This model achieved 87.5% recall in predicting failed inspections but had a very low precision of 0.9% and thus is not general-izable unless their is little or no cost for false positives.  In this case, as a restaurant manager that amounts to believing that you're likely fail an inspection.  Perhaps here the cost of failing is so high (ie. temporary restaurant closure, defection of patrons) that it's worth the extra precaution and investment to stave off even a low chance of failure.
+An isolation forest as a second approach seemed like a good option since the model doesn't rely on distant-based calculations, and as result you can train it without scaling the data.  The fnal version of this model has max_samples set to 100 and the number of estimators set to 20.  This model achieved 87.5% ...
 
-<img width="423" alt="image" src="https://user-images.githubusercontent.com/9493836/137949437-2d273a30-3d55-47c4-a7e4-b76b1afcff9d.png">
+<img width="423" alt="image" src="https://user-images.githubusercontent.com/9493836/138332835-fe5be551-804a-4d60-9368-4bd1133d5f9e.png">
 
 
 ### Take-aways
 
-Predicting restaurant inspections has proven to be a challenging problem.  As next steps, I would try to gather more data if possible (perhaps state-wide) and invest some time buidling new features.  While the isolation forest way overshoots the mark in terms of false positives, I generally rate the cost of false positive much lower that true positive which puts a restaurant's business as a whole at risk.  Thus if the false reigned in while still maintaining good recall this would be a good outcome.  Given the wide range of contexts in which class imbalance arises as part of challenge to be solved, I think this was very useful and intriguing area for further exploration.
+Predicting restaurant inspections has proven to be a challenging problem.  As next steps, I would try to gather more data if possible (perhaps state-wide) and invest some time buidling new features.  While the isolation forest ... Given the wide range of contexts in which class imbalance arises, I think this is an intriguing area for further exploration.
